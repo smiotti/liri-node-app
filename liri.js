@@ -2,12 +2,16 @@
 //** Step #7 read and set any environment variables with the dotenv package https://www.npmjs.com/package/dotenv
 //** with npm, npm install dotenv
 require('dotenv').config();
+
 //** Step #8  import the `keys.js` file and store it in a variable
 const keys = require("./keys.js");
+
 //** Step #8 cont - access  keys information
 // const spotify = new Spotify(keys.spotify);
-//** Include the request npm package (Don't forget to run 'npm install request' in this folder first!)
+
+//** Include the request npm package to retrieve data from APIs  ( ran'npm install request' to install request package )
 const request = require('request');
+
 //** Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 const fs = require('fs');
 
@@ -26,31 +30,28 @@ const searchInfo = process.argv[3];
 //      * Venue location
 
 
+
 //** concert function
-//** Ex API call to bansintown:  https://rest.bandsintown.com/artists/FleetwoodMac/events?app_id=codingbootcamp
-
 function concertThis() {
-	const artist = searchInfo;
-	const URL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+    const artist = searchInfo;
+    const URL = `https://rest.bandsintown.com/artists/${artist}/events?app_id=codingbootcamp`;
 
-	request(URL, function (error, response, body) {
-		if (!error && response.statusCode == 200) {
-			const info = JSON.parse(body);
-			// console.log('error:', error);
-			// console.log('statusCode:', response && response.statusCode);
-			// console.log('body:', info);
+    request(URL, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+           
+            const dataList = JSON.parse(body);
+            // console.log('error:', error);
+            console.log('statusCode:', response && response.statusCode);
+            // console.log('body:', dataList);
 
-		for (i = 0; i < info.length; i++) {
-            const details = info[i];
-            // console.log(`You have a total of ${result.toFixed(2)}`);
-			console.log("Venue Name: " + details.venue.name);
-			console.log("details.datetime);
-			console.log(moment(details.datetime).format("MM/DD/YY"));
-			}
-		}
-	});
+            for (i = 0; i < dataList.length; i++) {
+                const details = dataList[i];  
+                console.log(`Venue Name: ${details.venue.name}`);
+                console.log(`Venue Location: ${details.venue.city}, ${details.venue.region}, ${details.venue.country}`);
+            }            
+        }        
+    });
 };
-
 
 
 
@@ -106,17 +107,17 @@ function concertThis() {
 
 //**  Creating a switch-case statement to direct which function gets run.
 switch (action) {
-	case 'concert-this':
-		concertThis();
-		break;
-	case 'spotify-this-song':
-		spotifyThisSong();
-		break
-	case 'movie-this':
-		movieThis();
-		break
-	case 'do-what-it-says':
-		doWhatItSays();
+    case 'concert-this':
+        concertThis();
+        break;
+    case 'spotify-this-song':
+        spotifyThisSong();
+        break
+    case 'movie-this':
+        movieThis();
+        break
+    case 'do-what-it-says':
+        doWhatItSays();
         break
 }
 
