@@ -47,7 +47,7 @@ function concertThis() {
             for (i = 0; i < dataList.length; i++) {
                 const details = dataList[i];  
                 console.log(`Venue Name: ${details.venue.name}`);
-                console.log(`Venue Location: ${details.venue.city}, ${details.venue.region}, ${details.venue.country}`);
+                console.log(`Venue Location: ${details.venue.city}, ${details.venue.region} ${details.venue.country}`);
             }            
         }        
     });
