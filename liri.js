@@ -2,12 +2,16 @@
 //** Step #7 read and set any environment variables with the dotenv package https://www.npmjs.com/package/dotenv
 //** with npm, npm install dotenv
 require('dotenv').config();
+var Spotify = require('node-spotify-api');
+
+
 
 //** Step #8  import the `keys.js` file and store it in a variable
 const keys = require("./keys.js");
 
 //** Step #8 cont - access  keys information
-// const spotify = new Spotify(keys.spotify);
+const spotify = new Spotify(keys.spotify);
+
 
 //** Include the request npm package to retrieve data from APIs  ( ran'npm install request' to install request package )
 const request = require('request');
@@ -19,8 +23,8 @@ const fs = require('fs');
 //** Take two arguments
 //** The first will be the action (i.e. 'concert-this', 'spotify-this-song', etc.)
 //** The second will be for the specific information to seach on (ie. Artist/Band Name, Song Name, Movie Name, etc. )
-const action = process.argv[2];
-const searchInfo = process.argv[3];
+let action = process.argv[2];
+let searchInfo = process.argv[3];
 
 
 
@@ -38,18 +42,21 @@ function concertThis() {
 
     request(URL, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-           
+
             const dataList = JSON.parse(body);
             // console.log('error:', error);
-            console.log('statusCode:', response && response.statusCode);
+            // console.log('statusCode:', response && response.statusCode);
             // console.log('body:', dataList);
-
+            console.log(`\n-------------- Concert This ---------------`);
+            console.log(`Band Name: ${searchInfo}`);
+            console.log(`-------------------------------------------`);
             for (i = 0; i < dataList.length; i++) {
-                const details = dataList[i];  
-                console.log(`Venue Name: ${details.venue.name}`);
+                const details = dataList[i];
+                console.log(`\nVenue Name: ${details.venue.name}`);
                 console.log(`Venue Location: ${details.venue.city}, ${details.venue.region} ${details.venue.country}`);
-            }            
-        }        
+                console.log(`\n**********************************************`);
+            }
+        }
     });
 };
 
@@ -72,6 +79,24 @@ function concertThis() {
 
 
 
+// spotify function
+function spotifyThisSong() {
+    spotify.search({ type: 'track,artist', query: searchInfo, market: 'US' }, function (err, data) {
+        if (err ) {
+            return console.log('Error occurred: ' + err);
+        } else {
+            // console.log(data);
+            // console.log(JSON.stringify(data.tracks.items[0], null, 2)); 
+            console.log('\n************************ Spotify-This-Song *****************************\n')
+            console.log(`Artist Name:  ${JSON.stringify(data.tracks.items[0].album.artists[0].name)}`);
+            console.log(`  Song Name:  ${JSON.stringify(data.tracks.items[0].name)}`);
+            console.log(`Preview Url:  ${JSON.stringify(data.tracks.items[0].href)}`);
+            console.log(`      Album:  ${JSON.stringify(data.tracks.items[0].album.name)}`);
+            console.log('\n************************************************************************\n')
+        }
+    });
+};
+
 
 // 3. `node liri.js movie-this '<movie name here>'`
 // * This will output the following information to your terminal/bash window:
@@ -91,6 +116,42 @@ function concertThis() {
 // * You'll use the request package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use `trilogy`.
 
 
+//movie function
+function movieThis() {
+	let movieName;
+	if (!searchInfo) {
+		movieName = 'Mr. Nobody'
+    } else {
+        movieName = searchInfo;
+    }
+
+    const movieSource = `http://www.omdbapi.com/?t=${movieName}&apikey=trilogy`;
+
+	request(movieSource, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			var info = JSON.parse(body);
+			// console.log('error:', error);
+			// console.log('statusCode:', response && response.statusCode);
+            // console.log('body:', info);
+            console.log('\n************************ Movie This *****************************\n')
+			console.log("                  Title of the movie: " + JSON.parse(body).Title);
+			console.log("             Year the movie came out: " + JSON.parse(body).Year);
+			console.log("            IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
+			console.log(" Rotton Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
+			console.log("Country where the movie was produced: " + JSON.parse(body).Country);
+			console.log("               Language of the movie: " + JSON.parse(body).Language);
+            console.log("                 Actors in the movie: " + JSON.parse(body).Actors);
+            console.log("                   Plot of the movie: " + JSON.parse(body).Plot);
+		}
+	});
+};
+
+
+
+
+
+
+
 
 
 // 4. `node liri.js do-what-it-says`
@@ -98,6 +159,30 @@ function concertThis() {
 //      * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 //      * Edit the text in random.txt to test out the feature for movie-this and my-tweets
 
+
+
+
+//doWhatItSays function
+function doWhatItSays() {
+	fs.readFile("random.txt", "utf8", function(error, data) {
+		if (error) {
+			return console.log(error);
+        }
+        console.log(data);
+		let dataArr = data.split(",");
+		action = dataArr[0];
+        searchInfo = dataArr[1];
+        
+        if(action == "spotify-this-song"){
+         
+            spotifyThisSong();
+        
+        } else {
+            console.log("something else");
+        }
+        
+	})
+};
 
 
 
@@ -130,3 +215,9 @@ switch (action) {
 // (done) npm install request   https://www.npmjs.com/package/request
 // (done) npm install dotenv   This file will be used by the `dotenv` package to set what are known as environment variables to the global `process.env` object in node. https://www.npmjs.com/package/dotenv
 // (done) npm install --save node-spotify-api  [node-spotify-api package](https://www.npmjs.com/package/node-spotify-api).
+
+
+
+
+
+

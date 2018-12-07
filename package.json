@@ -1,5 +1,5 @@
 {
-  "name": "liri-node-app",
+  "name": "liri",
   "version": "1.0.0",
   "description": "Assignment #10 - LIRI BOT",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/smiotti/liri-node-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Steve Miotti",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/smiotti/liri-node-app/issues"
@@ -21,5 +21,6 @@
     "dotenv": "^6.2.0",
     "node-spotify-api": "^1.0.7",
     "request": "^2.88.0"
-  }
+  },
+  "devDependencies": {}
 }
