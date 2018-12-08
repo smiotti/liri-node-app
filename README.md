@@ -33,11 +33,11 @@ To use Liri you will need Node installed on your computer.  Open a command line 
      * A preview link of the song from Spotify
      * The album that the song is from
 
-      [Example: node liri spotify-this-song Dont stand so close to me](screen_cap/liri_spotify-this-song.gif)
+      [Example: node liri spotify-this-song Dont stand so close to me](screen_cap/liri_spotify-this-song.GIF)
 
         *If you are getting unexpected results, you can strengthen your search by adding the artist name. To do this use a "," between song and artist.*
         
-        [Example: node liri spotify-this-song Alone, Heart](screen_cap/liri_spotify-this-song_with_artis.gif)
+        [Example: node liri spotify-this-song Alone, Heart](screen_cap/liri_spotify-this-song_with_artis.GIF)
         
         *If no song is provided then Liri will default to "What's My Age Again" by blink-182.*
 
@@ -55,24 +55,24 @@ To use Liri you will need Node installed on your computer.  Open a command line 
        * Plot of the movie.
        * Actors in the movie.
 
-        [Example: node liri movie-this Top Gun](screen_cap/liri_movie-this.gif)
+        [Example: node liri movie-this Top Gun](screen_cap/liri_movie-this.GIF)
 
         *If the user doesn't type a movie in, Liri will output data for the movie 'Mr. Nobody.*
 
-        [Example: node liri movie-this ](screen_cap/liri_movie-this_no_data.gif)
+        [Example: node liri movie-this ](screen_cap/liri_movie-this_no_data.GIF)
 
 
    * `do-what-it-says` - This will take the text inside of random.txt and then use it to call one of LIRI's commands above.
 
-        [Spotify Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex1.gif)
+        [Spotify Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex1.GIF)
 
-        [Concert Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex2.gif)
+        [Concert Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex2.GIF)
 
-        [Movie Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex3.gif)
+        [Movie Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex3.GIF)
 
         *If the random.txt file contains an invalid command, Liri will alert the user.*
 
-        [Invalid Data Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_invalid.gif)
+        [Invalid Data Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_invalid.GIF)
 
 
 ------
