@@ -1,4 +1,4 @@
-# liri-node-app  :female_detective:
+# liri-node-app  :male_detective:
 ### Assignment #10 - LIRI BOT 
 
 Welcome to *Liri*, your personal search agent for music and movie infomation.  Similar to it's cousin Siri, Liri will take your command line input of a Song Name, Band Name, Artist, or a Movie Name and return usefull information about the band, song, or movie... like what upcoming venues a particular band will be performing.   The data behind this app is made avaible via API calls to the following data repositories:  
