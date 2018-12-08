@@ -1,18 +1,18 @@
 # liri-node-app  :female_detective:
 ### Assignment #10 - LIRI BOT 
 
-Welcome to *Liri*, your personal search agent for music and movie infomation.  Similar to it's cousin Siri, Liri will take your command line input of a Song Name, Band Name, Artist, or a Movie Name and return usefull information about the band, song, or movie... like what upcoming venues a particular band will be performing.   The data behind this app is made avaible via API calls to the following data repositories:  
+Welcome to *Liri*, your personal search agent for music and movie information.  Similar to it's cousin Siri, Liri will take your command line input of a Song Name, Band Name, Artist, or a Movie Name and return useful information about the band, song, or movie... like what upcoming venues a particular band will be performing.   The data behind this app is made available via API calls to the following data repositories:  
 
 * Bands in Town - http://www.artists.bandsintown.com/bandsintown-api
 * Spotify - https://www.npmjs.com/package/node-spotify-api
 * OMDB - http://www.omdbapi.com
 
-*This application is inteted for developer learning purposes, and not being published commercially, per 3rd party API guidelines.  All API keys/credentials for these data sources must be obtained by the user in order to run this application.*
+*This application is intended for developer learning purposes, and not being published commercially, per 3rd party API guidelines.  All API keys/credentials for these data sources must be obtained by the user in order to run this application.*
 
 
 ### How to use Liri:
 
-To use Liri you will need Node installed on your computure.  Open a command line window, and navigate to the root directory of the program.  Liri responds to four different commands. A desription of each command and links to screenshots of the program in action are provided below!  Use the following syntax from your command line to run Liri (without the quotes) -->  *node liri "command" "searchInfo"* 
+To use Liri you will need Node installed on your computer.  Open a command line window and navigate to the root directory of the program.  Liri responds to four different commands. A description of each command and links to screenshots of the program in action are provided below!  Use the following syntax from your command line to run Liri (without the quotes) -->  *node liri "command" "searchInfo"* 
 
    * `concert-this` - This will search the Bands in Town Artist Events API for an artist/band and render the following information about each event to the command line:
 
