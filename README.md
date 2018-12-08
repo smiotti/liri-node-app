@@ -12,7 +12,8 @@ Welcome to *Liri*, your personal search agent for music and movie information.  
 
 ### How to use Liri:
 
-To use Liri you will need Node installed on your computer.  Open a command line window and navigate to the root directory of the program.  Liri responds to four different commands. A description of each command and links to screenshots of the program in action are provided below!  Use the following syntax from your command line to run Liri (without the quotes) -->  *node liri "command" "searchInfo"* 
+To use Liri you will need Node installed on your computer.  Open a command line window and navigate to the root directory of the program.  Liri responds to four different commands. A description of each command and links to screenshots of the program in action are provided below!  Use the following syntax from your command line to run Liri (without the quotes) -->  *node liri "command" "searchInfo"*  
+*Note, quotes will be required if you want to use special characters or apostrophes in the "seachInfo".
 
    * `concert-this` - This will search the Bands in Town Artist Events API for an artist/band and render the following information about each event to the command line:
 
