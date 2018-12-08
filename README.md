@@ -19,7 +19,7 @@ To use Liri you will need Node installed on your computer.  Open a command line 
      * Name of the venue
      * Venue location
 
-      [Example: node liri concert-this Fleetwood Mac](screen_cap/liri_concert-this.Gif)
+      [Example: node liri concert-this Fleetwood Mac](screen_cap/liri_concert-this.GIF)
 
         *If no artist or band is provided, or there are no upcoming events, then Liri will alert the user.*
 
