@@ -47,14 +47,14 @@ To use Liri you will need Node installed on your computer.  Open a command line 
 
    * `movie-this` - This will search the OMDB API for a movie and render the following information about the movie to the command line:
 
-       * Title of the movie.
-       * Year the movie came out.
-       * IMDB Rating of the movie.
-       * Rotten Tomatoes Rating of the movie.
-       * Country where the movie was produced.
-       * Language of the movie.
-       * Plot of the movie.
-       * Actors in the movie.
+       * Title of the movie
+       * Year the movie came out
+       * IMDB Rating of the movie
+       * Rotten Tomatoes Rating of the movie
+       * Country where the movie was produced
+       * Language of the movie
+       * Plot of the movie
+       * Actors in the movie
 
         [Example: node liri movie-this Top Gun](screen_cap/liri_movie-this.GIF)
 
