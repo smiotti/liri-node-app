@@ -80,4 +80,4 @@ To use Liri you will need Node installed on your computer.  Open a command line 
   
 To contribute to the project, or get help -->   steve.miotti@dont_bother!!.com  :bowtie:
 
- 
+ [My Portfolio](https://smiotti.github.io/Responsive-Portfolio/)
