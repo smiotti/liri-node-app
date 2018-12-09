@@ -173,8 +173,3 @@ switch (action) {
         break
 }
 
-
-// toDos:  
-// Hide the keys from movie and concert APIs
-// Readme markup
-// Challenge
