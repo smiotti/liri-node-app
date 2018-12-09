@@ -65,11 +65,11 @@ To use Liri you will need Node installed on your computer.  Open a command line 
 
    * `do-what-it-says` - This will take the text inside of random.txt and then use it to call one of LIRI's commands above.
 
-        [Spotify Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex1.GIF)
+        [Example (Spotify): node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex1.GIF)
 
-        [Concert Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex2.GIF)
+        [Example (Concert): node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex2.GIF)
 
-        [Movie Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex3.GIF)
+        [Example (Movie): node liri do-what-it-says](screen_cap/liri_do-what-it-says_ex3.GIF)
 
         *If the random.txt file contains an invalid command, Liri will alert the user.*
 
