@@ -1,0 +1,138 @@
+﻿
+ -- Concert-This: Fleetwood Mac -- 
+
+Venue Name: The Forum 
+Venue Location: Los Angeles, CA United States
+
+Venue Name: The Forum 
+Venue Location: Los Angeles, CA United States
+
+Venue Name: The Forum 
+Venue Location: Los Angeles, CA United States
+
+Venue Name: Pepsi Center 
+Venue Location: Denver, CO United States
+
+Venue Name: Denny Sanford PREMIER Center 
+Venue Location: Sioux Falls, SD United States
+
+Venue Name: Toyota Center 
+Venue Location: Houston, TX United States
+
+Venue Name: American Airlines Center 
+Venue Location: Dallas, TX United States
+
+Venue Name: Frank C Erwin Special Events Center 
+Venue Location: Austin, TX United States
+
+Venue Name: Legacy Arena at The BJCC 
+Venue Location: Birmingham, AL United States
+
+Venue Name: BB&T Center 
+Venue Location: Sunrise, FL United States
+
+Venue Name: Amalie Arena 
+Venue Location: Tampa, FL United States
+
+Venue Name: Smoothie King Center 
+Venue Location: New Orleans, LA United States
+
+Venue Name: Colonial Life Arena 
+Venue Location: Columbia, SC United States
+
+Venue Name: Spectrum Center 
+Venue Location: Charlotte, NC United States
+
+Venue Name: Bridgestone Arena 
+Venue Location: Nashville, TN United States
+
+Venue Name: United Center 
+Venue Location: Chicago, IL United States
+
+Venue Name: Philips Arena 
+Venue Location: Atlanta, GA United States
+
+Venue Name: Capital One Arena 
+Venue Location: Washington, DC United States
+
+Venue Name: Madison Square Garden 
+Venue Location: New York, NY United States
+
+Venue Name: Prudential Center 
+Venue Location: Newark, NJ United States
+
+Venue Name: Boardwalk Hall 
+Venue Location: Atlantic City, NJ United States
+
+Venue Name: XL Center 
+Venue Location: Hartford, CT United States
+
+Venue Name: Madison Square Garden 
+Venue Location: New York, NY United States
+
+Venue Name: Times Union Center 
+Venue Location: Albany, NY United States
+
+Venue Name: Wells Fargo Center 
+Venue Location: Philadelphia, PA United States
+
+Venue Name: Royal Farms Arena 
+Venue Location: Baltimore, MD United States
+
+Venue Name: KeyBank Center 
+Venue Location: Buffalo, NY United States
+
+Venue Name: TD Garden 
+Venue Location: Boston, MA United States
+
+Venue Name: TD Garden 
+Venue Location: Boston, MA United States
+
+Venue Name: Wells Fargo Center 
+Venue Location: Philadelphia, PA United States
+
+Venue Name: Scotiabank Arena 
+Venue Location: Toronto,  Canada
+
+Venue Name: Waldbühne Berlin 
+Venue Location: Berlin,  Germany
+
+Venue Name: RDS Main Arena 
+Venue Location: Ballsbridge,  Ireland
+
+Venue Name: Wembley Stadium 
+Venue Location: Wembley,  United Kingdom
+
+Venue Name: Wembley Stadium 
+Venue Location: Wembley,  United Kingdom
+
+
+ -- Concert-This: Another Brick in the Wall -- 
+
+  Song Name:  "Another Brick in the Wall, Pt. 2" 
+Artist Name:  "Pink Floyd" 
+Preview Url:  "https://api.spotify.com/v1/tracks/4gMgiXfqyzZLMhsksGmbQV" 
+      Album:  "The Wall" 
+
+
+--------------- Movie-This: Die Hard ---------------- 
+
+                  Title of the movie: Die Hard 
+             Year the movie came out: 1988 
+             IMDB Rating of the movie: 8.2 
+ Rotton Tomatoes Rating of the movie: 93% 
+Country where the movie was produced: USA 
+               Language of the movie: English, German, Italian, Japanese 
+                 Actors in the movie: Bruce Willis, Bonnie Bedelia, Reginald VelJohnson, Paul Gleason 
+                   Plot of the movie: John McClane, officer of the NYPD, tries to save his wife Holly Gennaro and several others that were taken hostage by German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.
+
+
+ *** Command (from random.txt): spotify-this-song,I Want it That Way *** 
+
+ -- Concert-This: I Want it That Way -- 
+
+  Song Name:  "I Want It That Way" 
+Artist Name:  "Backstreet Boys" 
+Preview Url:  "https://api.spotify.com/v1/tracks/6e40mgJiCid5HRAGrbpGA6" 
+      Album:  "The Hits--Chapter One" 
+

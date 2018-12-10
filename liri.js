@@ -43,6 +43,12 @@ function concertThis() {
             console.log(`\n-------------- Concert This ---------------`);
             console.log(`Band Name: ${searchInfo}`);
             console.log(`-------------------------------------------`);
+            // append output to log.text file
+            fs.appendFile('log.txt', `\r\n -- Concert-This: ${searchInfo} -- \r\n\r\n`, function(err) {
+                if (err) {
+                  return console.log(err);
+                }
+            });
 
             // If there is no venue information availalbe in Bands in Town, log a warning message to user, otherwise log venue name and location
             if (!Array.isArray([]) || !dataList.length) {
@@ -54,6 +60,12 @@ function concertThis() {
                     console.log(`\nVenue Name: ${details.venue.name}`);
                     console.log(`Venue Location: ${details.venue.city}, ${details.venue.region} ${details.venue.country}`);
                     console.log(`\n**********************************************`);
+                    // append output to log.text file
+                    fs.appendFile('log.txt', `Venue Name: ${details.venue.name} \r\nVenue Location: ${details.venue.city}, ${details.venue.region} ${details.venue.country}\r\n\r\n`, function(err) {
+                        if (err) {
+                          return console.log(err);
+                        }
+                    });
                 }
             }
         }
@@ -87,6 +99,13 @@ function spotifyThisSong() {
             console.log(`Preview Url:  ${JSON.stringify(data.tracks.items[0].href)}`);
             console.log(`      Album:  ${JSON.stringify(data.tracks.items[0].album.name)}`);
             console.log('\n************************************************************************\n')
+            // append output to log.text file
+            fs.appendFile('log.txt', `\r\n -- Concert-This: ${searchInfo} -- \r\n\r\n  Song Name:  ${JSON.stringify(data.tracks.items[0].name)} \r\nArtist Name:  ${JSON.stringify(data.tracks.items[0].album.artists[0].name)} \r\nPreview Url:  ${JSON.stringify(data.tracks.items[0].href)} \r\n      Album:  ${JSON.stringify(data.tracks.items[0].album.name)} \r\n\r\n`, function(err) {
+                if (err) {
+                return console.log(err);
+                }
+            });
+
         }
     });
 };
@@ -114,15 +133,21 @@ function movieThis() {
             var info = JSON.parse(body);
             // console.log('body:', info);
             console.log('\n************************ Movie This *****************************\n')
-            console.log("                  Title of the movie: " + JSON.parse(body).Title);
-            console.log("             Year the movie came out: " + JSON.parse(body).Year);
-            console.log("            IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
-            console.log(" Rotton Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
-            console.log("Country where the movie was produced: " + JSON.parse(body).Country);
-            console.log("               Language of the movie: " + JSON.parse(body).Language);
-            console.log("                 Actors in the movie: " + JSON.parse(body).Actors);
-            console.log("                   Plot of the movie: " + JSON.parse(body).Plot);
+            console.log(`                  Title of the movie: ${JSON.parse(body).Title}`);
+            console.log(`             Year the movie came out: ${JSON.parse(body).Year}`);
+            console.log(`            IMDB Rating of the movie: ${JSON.parse(body).imdbRating}`);
+            console.log(` Rotton Tomatoes Rating of the movie: ${JSON.parse(body).Ratings[1].Value}`);
+            console.log(`Country where the movie was produced: ${JSON.parse(body).Country}`);
+            console.log(`               Language of the movie: ${JSON.parse(body).Language}`);
+            console.log(`                 Actors in the movie: ${JSON.parse(body).Actors}`);
+            console.log(`                   Plot of the movie: ${JSON.parse(body).Plot}`);
             console.log('\n******************************************************************\n')
+             // append output to log.text file
+            fs.appendFile('log.txt', `\r\n--------------- Movie-This: ${searchInfo} ---------------- \r\n\r\n                  Title of the movie: ${JSON.parse(body).Title} \r\n             Year the movie came out: ${JSON.parse(body).Year} \r\n             IMDB Rating of the movie: ${JSON.parse(body).imdbRating} \r\n Rotton Tomatoes Rating of the movie: ${JSON.parse(body).Ratings[1].Value} \r\nCountry where the movie was produced: ${JSON.parse(body).Country} \r\n               Language of the movie: ${JSON.parse(body).Language} \r\n                 Actors in the movie: ${JSON.parse(body).Actors} \r\n                   Plot of the movie: ${JSON.parse(body).Plot}\r\n\r\n`, function(err) {
+                if (err) {
+                return console.log(err);
+                }
+            });
         }
     });
 };
@@ -138,6 +163,12 @@ function doWhatItSays() {
             return console.log(`Error occurred: ${err}`);
         }
         console.log(`\n\nCommand (from random.txt): ${data}\n`);
+        // append output to log.text file
+        fs.appendFile('log.txt', `\r\n *** Command (from random.txt): ${data} *** \r\n`, function(err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
         let dataArr = data.split(",");
         action = dataArr[0];
         searchInfo = dataArr[1];

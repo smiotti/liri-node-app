@@ -76,6 +76,10 @@ To use Liri you will need Node installed on your computer.  Open a command line 
         [Invalid Data Example: node liri do-what-it-says](screen_cap/liri_do-what-it-says_invalid.GIF)
 
 
+### Challenge
+In addition to logging the data to the terminal/bash window, data is also being outputed to a .txt file called [log.txt](log.txt), located in the root folder.  Data is being appended to the text file.
+    
+
 ------
   
 To contribute to the project, or get help -->   steve.miotti@dont_bother!!.com  :bowtie:
